@@ -12,7 +12,7 @@
     <string name="number0">0</string>
     <string name="backspace">←</string>
     <string name="clear">C</string>
-    <string name="root">√</string>
+    <string name="sqrt">√</string>
     <string name="divide">/</string>
     <string name="multiplication">x</string>
     <string name="minus">-</string>

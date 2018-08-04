@@ -101,14 +101,28 @@ public class MainActivity extends AppCompatActivity {
                 action = CalculatorAction.NONE;
             }
         });
+
+        final Button btnSqrt = findViewById(R.id.btnSqrt);
+        btnSqrt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MathAction mathAction = new MathAction();
+                final EditText editResult = (EditText)findViewById(R.id.editResult);
+                String current = editResult.getText().toString();
+                result = mathAction.sqrt(Double.parseDouble(current));
+                editResult.setText(result.toString());
+            }
+        });
     }
 
     public void OnNumberButtonClick(View view) {
         final EditText editResult = (EditText)findViewById(R.id.editResult);
         String btnText = ((Button) view).getText().toString();
-        if (btnText.equals("0") && this.displayValue.equals("0")) {
-            return;
+
+        if (this.displayValue.equals("0")) {
+            this.displayValue = "";
         }
+
         this.displayValue += btnText;
         editResult.setText(displayValue);
     }

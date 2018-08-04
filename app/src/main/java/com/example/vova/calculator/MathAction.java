@@ -17,6 +17,10 @@ public class MathAction {
         return a * b;
     }
 
+    public Double sqrt(double a) {
+        return java.lang.Math.sqrt(a);
+    }
+
     public Double revert(double a) {
         return -a;
     }
